@@ -19,8 +19,4 @@ public class Rubro_Conoc {
     @Column(name = "nombre_rubro", length = 45, nullable = false)
     private String nombre_rubro;
 	
-	@ManyToOne(fetch = FetchType.LAZY) // Relación muchos a uno con Persona
-    @JoinColumn(name = "conocimiento_id", referencedColumnName = "id", nullable = false)
-    private Persona persona;
-	
 }

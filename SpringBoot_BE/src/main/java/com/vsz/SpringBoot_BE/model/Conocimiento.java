@@ -26,4 +26,8 @@ public class Conocimiento {
     @JoinColumn(name = "persona_id", referencedColumnName = "id", nullable = false)
     private Persona persona;
 	
+	@ManyToOne(fetch = FetchType.LAZY) // Relación muchos a uno con Persona
+    @JoinColumn(name = "rubro_conoc_id", referencedColumnName = "id", nullable = false)
+    private Rubro_Conoc rubro_conoc;
+	
 }

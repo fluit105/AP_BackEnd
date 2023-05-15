@@ -22,11 +22,11 @@ public class Conocimiento {
     @Column(name = "descripcion", length = 45, nullable = false)
     private String descripcion;
 	
-	@ManyToOne(fetch = FetchType.LAZY) // Relación muchos a uno con Persona
+	@ManyToOne // Relación muchos a uno con Persona
     @JoinColumn(name = "persona_id", referencedColumnName = "id", nullable = false)
     private Persona persona;
 	
-	@ManyToOne(fetch = FetchType.LAZY) // Relación muchos a uno con Persona
+	@ManyToOne // Relación muchos a uno con Persona
     @JoinColumn(name = "rubro_conoc_id", referencedColumnName = "id", nullable = false)
     private Rubro_Conoc rubro_conoc;
 	

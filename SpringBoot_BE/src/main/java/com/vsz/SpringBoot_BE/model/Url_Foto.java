@@ -22,39 +22,39 @@ public class Url_Foto {
     @Column(name = "descripcion", length = 100, nullable = false)
     private String descripcion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "estudio_id")
     private Estudio estudio;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "estudio_persona_id")
     private Estudio estudioPersona;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "certificacion_id")
     private Certificacion certificacion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "certificacion_persona_id")
     private Certificacion certificacionPersona;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "conocimiento_id")
     private Conocimiento conocimiento;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "conocimiento_persona_id")
     private Conocimiento conocimientoPersona;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "proyecto_id")
     private Proyecto proyecto;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "proyecto_persona_id")
     private Proyecto proyectoPersona;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "persona_id")
     private Persona persona;
 

@@ -26,7 +26,7 @@ public class Certificacion {
     @Column(name = "fechaObtencion", nullable = false)
     private LocalDate fechaObtencion;
 	
-	@ManyToOne(fetch = FetchType.LAZY) // Relación muchos a uno con Persona
+	@ManyToOne // Relación muchos a uno con Persona
     @JoinColumn(name = "persona_id", referencedColumnName = "id", nullable = false)
     private Persona persona;
 

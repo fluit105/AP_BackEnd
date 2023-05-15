@@ -29,7 +29,7 @@ public class Proyecto {
     @Column(name = "fechaFin", nullable = false)
     private LocalDate fechaFin;
 
-    @ManyToOne(fetch = FetchType.LAZY) // Relación muchos a uno con Persona
+    @ManyToOne // Relación muchos a uno con Persona
     @JoinColumn(name = "persona_id", referencedColumnName = "id", nullable = false)
     private Persona persona;
 

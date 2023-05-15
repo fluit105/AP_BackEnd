@@ -11,6 +11,7 @@ import lombok.Setter;
 @Getter @Setter
 @Entity
 @Table(name = "estudio")
+
 public class Estudio {
 
 	@Id
@@ -32,7 +33,7 @@ public class Estudio {
 	@Column(name = "institucion", length = 45, nullable = false)
     private String institucion;
 
-    @ManyToOne(fetch = FetchType.LAZY) // Relación muchos a uno con Persona
+    @ManyToOne // Relación muchos a uno con Persona
     @JoinColumn(name = "persona_id", referencedColumnName = "id", nullable = false)
     private Persona persona;
 	

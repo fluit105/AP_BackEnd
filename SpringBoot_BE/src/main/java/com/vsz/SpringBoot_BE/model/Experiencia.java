@@ -32,11 +32,11 @@ public class Experiencia {
     @Column(name = "descripcion", length = 200, nullable = false)
     private String descripcion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "persona_id", referencedColumnName = "id", nullable = false)
     private Persona persona;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "tipo_empleo_id", referencedColumnName = "id", nullable = false)
     private Tipo_Empleo tipoEmpleo;
 

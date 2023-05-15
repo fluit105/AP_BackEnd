@@ -20,6 +20,4 @@ public class PersonaService implements IPersonaService {
 		return listaPersonas;
 	}
 	
-	
-	
 }

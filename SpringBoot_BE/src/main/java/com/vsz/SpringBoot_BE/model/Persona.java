@@ -23,6 +23,12 @@ public class Persona {
 	@Column (name = "apellido", length = 45, nullable = false)
 	private String apellido;
 	
+	@Column (name = "ocupacion", length = 45, nullable = false)
+	private String ocupacion;
+	
+	@Column (name = "nivel", length = 45, nullable = false)
+	private String nivel;
+	
 	@Column (name = "domicilio", length = 45, nullable = false)
 	private String domicilio;
 	
@@ -35,7 +41,7 @@ public class Persona {
 	@Column (name = "correo", length = 45, nullable = false, unique = true)
 	private String correo;
 	
-	@Column (name = "resumen", length = 500, nullable = false)
+	@Column (name = "resumen", length = 1000, nullable = false)
 	private String resumen;
 	
 	@Column (name = "linkedin", length = 100, unique = true)

@@ -1,4 +1,4 @@
-FROM amazoncorretto:17-alpine-jdk
+FROM amazoncorretto:8-alpine-jdk
 
 COPY target/SpringBoot_BE-0.0.1-SNAPSHOT.jar app.jar
 

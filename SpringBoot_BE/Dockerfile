@@ -1,5 +1,4 @@
-FROM amazoncorretto:8-alpine-jdk
-
-COPY target/SpringBoot_BE-0.0.1-SNAPSHOT.jar app.jar
-
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+COPY target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]

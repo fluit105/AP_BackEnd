@@ -33,6 +33,11 @@ public class Controller {
 	@Autowired
 	private IUrl_FotoService url_fotoServ;
 	
+	@GetMapping("/test")
+	public String test() {
+		return "Testing 1 2 3... Hola";
+	}
+	
 	@GetMapping("/certificaciones")
 	public List<Certificacion> verCertificaciones() {
 		return certServ.verCertificaciones();

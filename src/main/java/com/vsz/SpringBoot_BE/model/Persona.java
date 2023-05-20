@@ -35,7 +35,7 @@ public class Persona {
 	@Column (name = "fechaNac", nullable = false)
 	private LocalDate fechaNac;
 	
-	@Column (name = "telefono", length = 12, nullable = false, unique = true)
+	@Column (name = "telefono", length = 16, nullable = false, unique = true)
 	private String telefono;
 	
 	@Column (name = "correo", length = 45, nullable = false, unique = true)

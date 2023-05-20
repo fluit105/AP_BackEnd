@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,7 +37,7 @@ public class Controller {
 	
 	@GetMapping("/test")
 	public String test() {
-		return "Testing 1 2 3... Hola";
+		return "API REST funcionando";
 	}
 	
 	@GetMapping("/certificaciones")
@@ -63,6 +65,11 @@ public class Controller {
 		return persoServ.verPersonas();
 	}
 	
+	@PostMapping("/new/persona")
+	public void crearPersona(@RequestBody Persona pers) {
+		persoServ.crearPersona(pers);
+	}
+	
 	@GetMapping("/proyectos")
 	public List<Proyecto> verProyectos() {
 		return proyeServ.verProyectos();
@@ -81,6 +88,11 @@ public class Controller {
 	@GetMapping("/url_fotos")
 	public List<Url_Foto> verUrl_Fotos() {
 		return url_fotoServ.verUrl_Fotos();
+	}
+	
+	@PostMapping("/new/url_foto")
+	public void crearURL_Foto(@RequestBody Url_Foto url) {
+		url_fotoServ.crearURL_Foto(url);
 	}
 	
 }

@@ -20,4 +20,19 @@ public class Url_FotoService implements IUrl_FotoService {
 		return listaUrl_Fotos;
 	}
 	
+	@Override
+	public void crearURL_Foto(Url_Foto url) {
+		urlRepo.save(url);
+	}
+
+	@Override
+	public void borrarUrl_Foto(Long id) {
+		urlRepo.deleteById(id);
+	}
+
+	@Override
+	public Url_Foto buscarUrl_Foto(Long id) {
+		return urlRepo.findById(id).orElse(null);
+	}
+	
 }

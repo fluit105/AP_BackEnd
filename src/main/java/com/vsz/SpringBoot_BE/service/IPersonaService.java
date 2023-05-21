@@ -15,4 +15,6 @@ public interface IPersonaService {
 	
 	public Persona buscarPersona (Long id);
 	
+	public void modificarPersona (Long id, Persona per);
+	
 }

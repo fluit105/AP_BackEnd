@@ -109,7 +109,7 @@ public class Controller {
 		url_fotoServ.borrarUrl_Foto(id);
 	}
 	
-	@PutMapping("edit/url_foto/{id}")
+	@PutMapping("edit/url_fotos/{id}")
 	public void modificarURL_Foto(@PathVariable Long id, @RequestBody Url_Foto url) {
 		url_fotoServ.modificarURL_Foto(id, url);
 	}

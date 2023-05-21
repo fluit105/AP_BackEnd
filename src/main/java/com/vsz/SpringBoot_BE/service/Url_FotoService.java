@@ -44,7 +44,16 @@ public class Url_FotoService implements IUrl_FotoService {
 		if (urlExistente.isPresent()) {
 			Url_Foto urlActual = urlExistente.get();
 			urlActual.setUrlFoto(url.getUrlFoto());
-
+			urlActual.setDescripcion(url.getDescripcion());
+			urlActual.setEstudio(url.getEstudio());
+			urlActual.setCertificacion(url.getCertificacion());
+			urlActual.setCertificacionPersona(url.getCertificacionPersona());
+			urlActual.setConocimiento(url.getConocimiento());
+			urlActual.setConocimientoPersona(url.getConocimientoPersona());
+			urlActual.setProyecto(url.getProyecto());
+			urlActual.setProyectoPersona(url.getProyectoPersona());
+			urlActual.setPersona(url.getPersona());
+			
 			urlRepo.save(urlActual);
 		}
 	}

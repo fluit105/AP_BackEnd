@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://portfolio-backend-t3x5.onrender.com")
 public class Controller {
 
 	@Autowired

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -106,6 +107,11 @@ public class Controller {
 	@DeleteMapping("/drop/url_foto/{id}")
 	public void borrarUrl_Foto(@PathVariable Long id) {
 		url_fotoServ.borrarUrl_Foto(id);
+	}
+	
+	@PutMapping("edit/url_foto/{id}")
+	public void modificarURL_Foto(@PathVariable Long id, @RequestBody Url_Foto url) {
+		url_fotoServ.modificarURL_Foto(id, url);
 	}
 	
 }

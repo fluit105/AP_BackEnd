@@ -14,5 +14,7 @@ public interface IUrl_FotoService {
 	public void borrarUrl_Foto (Long id);
 	
 	public Url_Foto buscarUrl_Foto (Long id);
+	
+	public void modificarURL_Foto (Long id, Url_Foto url);
 
 }

@@ -42,7 +42,10 @@ public class CertificacionService implements ICertificacionService {
 
 		if (cerExistente.isPresent()) {
 			Certificacion cerActual = cerExistente.get();
-			
+			cerActual.setDescripcion(cer.getDescripcion());
+			cerActual.setFechaObtencion(cer.getFechaObtencion());
+			cerActual.setTitulo(cer.getTitulo());
+			cerActual.setPersona(cer.getPersona());
 			
 			certiRepo.save(cerActual);
 		}

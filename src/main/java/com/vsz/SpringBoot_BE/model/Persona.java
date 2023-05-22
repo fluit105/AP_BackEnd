@@ -41,7 +41,7 @@ public class Persona {
 	@Column (name = "correo", length = 45, nullable = false, unique = true)
 	private String correo;
 	
-	@Column (name = "resumen", length = 1000, nullable = false)
+	@Column (name = "resumen", length = 1800, nullable = false)
 	private String resumen;
 	
 	@Column (name = "linkedin", length = 100, unique = true)
@@ -50,10 +50,12 @@ public class Persona {
 	public Persona() {
 	}
 
-	public Persona(Long id, String nombre, String apellido, String domicilio, LocalDate fechaNac, String telefono, String correo, String resumen, String linkedin) {
+	public Persona(Long id, String nombre, String apellido, String ocupacion, String nivel, String domicilio, LocalDate fechaNac, String telefono, String correo, String resumen, String linkedin) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
+		this.ocupacion = ocupacion;
+		this.nivel = nivel;
 		this.domicilio = domicilio;
 		this.fechaNac = fechaNac;
 		this.telefono = telefono;
@@ -61,5 +63,7 @@ public class Persona {
 		this.resumen = resumen;
 		this.linkedin = linkedin;
 	}
+
+	
 	
 }

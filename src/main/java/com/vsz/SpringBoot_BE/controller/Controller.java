@@ -79,6 +79,11 @@ public class Controller {
 		persoServ.borrarPersona(id);
 	}
 	
+	@PutMapping("/edit/persona/{id}")
+	public void modificarPersona(@PathVariable Long id, @RequestBody Persona per) {
+		persoServ.modificarPersona(id, per);
+	}
+	
 	@GetMapping("/proyectos")
 	public List<Proyecto> verProyectos() {
 		return proyeServ.verProyectos();

@@ -8,5 +8,13 @@ import java.util.List;
 public interface IEstudioService {
 	
 	public List<Estudio> verEstudios();
+	
+	public void crearEstudio (Estudio est);
+	
+	public void borrarEstudio (Long id);
+	
+	public Estudio buscarEstudio (Long id);
+	
+	public void modificarEstudio (Long id, Estudio est);
 
 }

@@ -20,7 +20,7 @@ public class Proyecto {
     @Column(name = "titulo", length = 45, nullable = false)
     private String titulo;
 
-    @Column(name = "descripcion", length = 45, nullable = false)
+    @Column(name = "descripcion", length = 2000, nullable = false)
     private String descripcion;
 
     @Column(name = "fechaInicio", nullable = false)

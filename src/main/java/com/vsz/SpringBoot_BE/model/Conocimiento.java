@@ -16,10 +16,10 @@ public class Conocimiento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "titulo", length = 45, nullable = false)
+    @Column(name = "titulo", length = 55, nullable = false)
     private String titulo;
 
-    @Column(name = "descripcion", length = 45, nullable = false)
+    @Column(name = "descripcion", length = 300, nullable = false)
     private String descripcion;
 	
 	@ManyToOne // Relación muchos a uno con Persona

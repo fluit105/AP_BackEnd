@@ -17,10 +17,10 @@ public class Certificacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "titulo", length = 45, nullable = false)
+    @Column(name = "titulo", length = 55, nullable = false)
     private String titulo;
 
-    @Column(name = "descripcion", length = 45, nullable = false)
+    @Column(name = "descripcion", length = 1600, nullable = false)
     private String descripcion;
 
     @Column(name = "fechaObtencion", nullable = false)

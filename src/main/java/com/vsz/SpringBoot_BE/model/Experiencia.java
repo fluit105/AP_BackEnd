@@ -29,7 +29,7 @@ public class Experiencia {
     @Column(name = "fechaFin")
     private LocalDate fechaFin;
 
-    @Column(name = "descripcion", length = 200, nullable = false)
+    @Column(name = "descripcion", length = 1800, nullable = false)
     private String descripcion;
 
     @ManyToOne

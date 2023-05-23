@@ -23,7 +23,7 @@ public class Persona {
 	@Column (name = "apellido", length = 45, nullable = false)
 	private String apellido;
 	
-	@Column (name = "ocupacion", length = 45, nullable = false)
+	@Column (name = "ocupacion", length = 55, nullable = false)
 	private String ocupacion;
 	
 	@Column (name = "nivel", length = 45, nullable = false)

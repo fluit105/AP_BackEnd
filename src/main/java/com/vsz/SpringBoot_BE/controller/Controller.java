@@ -49,9 +49,39 @@ public class Controller {
 		return certServ.verCertificaciones();
 	}
 	
+	@PostMapping("/new/certificacion")
+	public void crearCertificacion(@RequestBody Certificacion cer) {
+		certServ.crearCertificacion(cer);
+	}
+	
+	@DeleteMapping("/drop/certificacion/{id}")
+	public void borrarCertificacion(@PathVariable Long id) {
+		certServ.borrarCertificacion(id);
+	}
+	
+	@PutMapping("/edit/certificacion/{id}")
+	public void modificarCertificacion(@PathVariable Long id, @RequestBody Certificacion cer) {
+		certServ.modificarCertificacion(id, cer);
+	}
+	
 	@GetMapping("/conocimientos")
 	public List<Conocimiento> verConocimientos() {
 		return conocServ.verConocimientos();
+	}
+	
+	@PostMapping("/new/conocimiento")
+	public void crearConocimiento(@RequestBody Conocimiento con) {
+		conocServ.crearConocimiento(con);
+	}
+	
+	@DeleteMapping("/drop/conocimiento/{id}")
+	public void borrarConocimiento(@PathVariable Long id) {
+		conocServ.borrarConocimiento(id);
+	}
+	
+	@PutMapping("/edit/conocimiento/{id}")
+	public void modificarConocimiento(@PathVariable Long id, @RequestBody Conocimiento con) {
+		conocServ.modificarConocimiento(id, con);
 	}
 	
 	@GetMapping("/estudios")
@@ -59,9 +89,39 @@ public class Controller {
 		return estudServ.verEstudios();
 	}
 	
+	@PostMapping("/new/estudio")
+	public void crearEstudio(@RequestBody Estudio est) {
+		estudServ.crearEstudio(est);
+	}
+	
+	@DeleteMapping("/drop/estudio/{id}")
+	public void borrarEstudio(@PathVariable Long id) {
+		estudServ.borrarEstudio(id);
+	}
+	
+	@PutMapping("/edit/estudio/{id}")
+	public void modificarEstudio(@PathVariable Long id, @RequestBody Estudio est) {
+		estudServ.modificarEstudio(id, est);
+	}
+	
 	@GetMapping("/experiencias")
 	public List<Experiencia> verExperiencias() {
 		return expeServ.verExperiencias();
+	}
+	
+	@PostMapping("/new/experiencia")
+	public void crearExperiencia(@RequestBody Experiencia exp) {
+		expeServ.crearExperiencia(exp);
+	}
+	
+	@DeleteMapping("/drop/experiencia/{id}")
+	public void borrarExperiencia(@PathVariable Long id) {
+		expeServ.borrarExperiencia(id);
+	}
+	
+	@PutMapping("/edit/experiencia/{id}")
+	public void modificarExperiencia(@PathVariable Long id, @RequestBody Experiencia exp) {
+		expeServ.modificarExperiencia(id, exp);
 	}
 	
 	@GetMapping("/personas")
@@ -89,14 +149,59 @@ public class Controller {
 		return proyeServ.verProyectos();
 	}
 	
+	@PostMapping("/new/proyecto")
+	public void crearProyecto(@RequestBody Proyecto pro) {
+		proyeServ.crearProyecto(pro);
+	}
+	
+	@DeleteMapping("/drop/proyecto/{id}")
+	public void borrarProyecto(@PathVariable Long id) {
+		proyeServ.borrarProyecto(id);
+	}
+	
+	@PutMapping("/edit/proyecto/{id}")
+	public void modificarProyecto(@PathVariable Long id, @RequestBody Proyecto pro) {
+		proyeServ.modificarProyecto(id, pro);
+	}
+	
 	@GetMapping("/rubro_conocimientos")
 	public List<Rubro_Conoc> verRubro_Conocs() {
 		return rub_conServ.verRubro_Conocs();
 	}
 	
+	@PostMapping("/new/rubro_conocimiento")
+	public void crearRubro_Conoc(@RequestBody Rubro_Conoc rub) {
+		rub_conServ.crearRubro_Conoc(rub);
+	}
+	
+	@DeleteMapping("/drop/rubro_conocimiento/{id}")
+	public void borrarRubro_Conoc(@PathVariable Long id) {
+		rub_conServ.borrarRubro_Conoc(id);
+	}
+	
+	@PutMapping("/edit/rubro_conocimiento/{id}")
+	public void modificarRubro_Conoc(@PathVariable Long id, @RequestBody Rubro_Conoc rub) {
+		rub_conServ.modificarRubro_Conoc(id, rub);
+	}
+	
 	@GetMapping("/tipo_empleos")
 	public List<Tipo_Empleo> verTipo_Empleos() {
 		return tip_empServ.verTipo_Empleos();
+	}
+	
+	@PostMapping("/new/tipo_empleo")
+	public void crearTipo_Empleo(@RequestBody Tipo_Empleo tip) {
+		tip_empServ.crearTipo_Empleo(tip);
+	}
+	
+	@DeleteMapping("/drop/tipo_empleo/{id}")
+	public void borrarTipo_Empleo(@PathVariable Long id) {
+		tip_empServ.borrarTipo_Empleo(id);
+	}
+	
+	@PutMapping("/edit/tipo_empleo/{id}")
+	public void modificarTipo_Empleo(@PathVariable Long id, @RequestBody Tipo_Empleo tip) {
+		tip_empServ.modificarTipo_Empleo(id, tip);
 	}
 	
 	@GetMapping("/url_fotos")

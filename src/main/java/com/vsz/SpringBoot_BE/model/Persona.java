@@ -63,7 +63,4 @@ public class Persona {
 		this.resumen = resumen;
 		this.linkedin = linkedin;
 	}
-
-	
-	
 }

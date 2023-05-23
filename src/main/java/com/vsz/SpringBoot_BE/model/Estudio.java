@@ -27,7 +27,7 @@ public class Estudio {
     @Column(name = "fechaInicio", nullable = false)
     private LocalDate fechaInicio;
 
-    @Column(name = "fechaFin", nullable = false)
+    @Column(name = "fechaFin")
     private LocalDate fechaFin;
 	
 	@Column(name = "institucion", length = 45, nullable = false)

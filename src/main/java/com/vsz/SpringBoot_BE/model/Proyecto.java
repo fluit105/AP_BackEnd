@@ -26,7 +26,7 @@ public class Proyecto {
     @Column(name = "fechaInicio", nullable = false)
     private LocalDate fechaInicio;
 
-    @Column(name = "fechaFin", nullable = false)
+    @Column(name = "fechaFin")
     private LocalDate fechaFin;
 
     @ManyToOne // Relación muchos a uno con Persona

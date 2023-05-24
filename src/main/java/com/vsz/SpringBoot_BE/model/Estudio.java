@@ -21,7 +21,7 @@ public class Estudio {
     @Column(name = "titulo", length = 45, nullable = false)
     private String titulo;
 
-    @Column(name = "descripcion", length = 1600, nullable = false)
+    @Column(name = "descripcion", length = 1800, nullable = false)
     private String descripcion;
 
     @Column(name = "fechaInicio", nullable = false)

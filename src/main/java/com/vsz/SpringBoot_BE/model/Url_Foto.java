@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter @Setter
 @Entity
 @Table(name = "url_foto")
-public class Url_Foto {
+public class Url_Foto { 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,24 +35,12 @@ public class Url_Foto {
     private Certificacion certificacion;
 
     @ManyToOne
-    @JoinColumn(name = "certificacion_persona_id")
-    private Certificacion certificacionPersona;
-
-    @ManyToOne
     @JoinColumn(name = "conocimiento_id")
     private Conocimiento conocimiento;
 
     @ManyToOne
-    @JoinColumn(name = "conocimiento_persona_id")
-    private Conocimiento conocimientoPersona;
-
-    @ManyToOne
     @JoinColumn(name = "proyecto_id")
     private Proyecto proyecto;
-
-    @ManyToOne
-    @JoinColumn(name = "proyecto_persona_id")
-    private Proyecto proyectoPersona;
 
     @ManyToOne
     @JoinColumn(name = "persona_id")
@@ -68,11 +56,8 @@ public class Url_Foto {
 		this.estudio = estudio;
 		this.estudioPersona = estudioPersona;
 		this.certificacion = certificacion;
-		this.certificacionPersona = certificacionPersona;
 		this.conocimiento = conocimiento;
-		this.conocimientoPersona = conocimientoPersona;
 		this.proyecto = proyecto;
-		this.proyectoPersona = proyectoPersona;
 		this.persona = persona;
 	}
 
